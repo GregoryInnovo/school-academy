@@ -19,6 +19,11 @@ public class Timer : MonoBehaviour
     {
         if (timerActive == true){
             CurrentTime = CurrentTime - Time.deltaTime;
+            if (CurrentTime <= 0){
+                timerActive= false;
+                Start();
+                Debug.Log("Se acabo el tiempo");
+            }
         }
         TimeSpan time = TimeSpan.FromSeconds(CurrentTime);
          CurrentTimeText.text = time.Minutes.ToString()+ ":" + time.Seconds.ToString();   
