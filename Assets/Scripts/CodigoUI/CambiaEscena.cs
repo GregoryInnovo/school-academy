@@ -10,7 +10,7 @@ public class CambiaEscena : MonoBehaviour
 
     public void cambiar()
     {
-        SceneManager.LoadScene("Excena4");
+        SceneManager.LoadScene("Excena1");
         funciones.GetComponent<GuardarPersonaje>().Guardar();
     }
 }
