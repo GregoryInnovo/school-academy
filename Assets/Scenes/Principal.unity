@@ -498,18 +498,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: b52b603fc34f34041a4b8e6fddb72bb2, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PlayerSelecter
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 806427825}
         m_TargetAssemblyTypeName: ClickButtonPlay, Assembly-CSharp
         m_MethodName: IWasClicked
@@ -517,6 +505,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ClickButtonPlay, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -992,7 +992,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2083711161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52b603fc34f34041a4b8e6fddb72bb2, type: 3}
+  m_Script: {fileID: 11500000, guid: fd9b18455523e384ba85f6a195e69beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  funciones: {fileID: 2083711161}
