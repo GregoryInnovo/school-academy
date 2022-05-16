@@ -1,10 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Trigger : MonoBehaviour
 {
     public GameObject Particles;
+    public Image healPC;
+    public Scrollbar Scrollbar;
+
+    private float lifeTime;
+    public float speed = 0.05f;
+    public bool reduceLife;
+    private bool aux = true;
+
+    void Update() {
+        if(reduceLife) {
+        lifeTime = speed * Time.deltaTime;
+        
+        float SbV = Scrollbar.value;
+        Scrollbar.value = Scrollbar.value - lifeTime;
+
+        if(SbV >= 0.8) {
+                healPC.color = new Color(0, 255, 0);
+            } 
+            if(SbV <= 0.7 || SbV < 0.5) {
+                healPC.color = new Color(255, 232, 0);
+            } 
+            if(SbV <= 0.4 | SbV < 0.1) {
+                healPC.color = new Color(255, 0, 0);
+            }
+            if(SbV <= 0.0) {
+                healPC.color = new Color(0, 0, 0);
+                if(aux) {
+                    ManageScene.sharedInstance.deadPCs = ManageScene.sharedInstance.deadPCs + 1;
+                    aux = false;
+                }
+            }
+        }
+        
+
+    }
 
     void OnTriggerEnter(Collider col)
     {
@@ -12,6 +48,7 @@ public class Trigger : MonoBehaviour
 	if(col.gameObject.tag == "Boss"){
 	   Debug.Log("Generar Particulas");
            Particles.SetActive(true);
+           reduceLife = true;
 	} else if (col.gameObject.tag == "Player"){
 	   Debug.Log("Detener Particulas");
            Particles.SetActive(false);
@@ -27,7 +64,9 @@ public class Trigger : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-	Debug.Log("Hubo Colisión 3");
+        Debug.Log("Hubo Colisión 3");
+        // reduceLife = false;
+    
         
     }
 }

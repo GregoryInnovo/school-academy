@@ -36,29 +36,31 @@ public class BossMovement : MonoBehaviour
  
      void Update()
      {
-          // Speed of the Boss
-	     step = speed * Time.deltaTime;
+          if(ManageScene.sharedInstance.gamePlay) {
+               // Speed of the Boss
+               step = speed * Time.deltaTime;
 
 
-          if(canMove) {
-               // Go to the target
-               transform.position = Vector3.MoveTowards(transform.position, currentTarget.transform.position, step);
-               //transform.rotation = Quaternion.RotateTowards(transform.rotation, currentTarget.transform.rotation, step);
+               if(canMove) {
+                    // Go to the target
+                    transform.position = Vector3.MoveTowards(transform.position, currentTarget.transform.position, step);
+                    //transform.rotation = Quaternion.RotateTowards(transform.rotation, currentTarget.transform.rotation, step);
+               }
+
+               if(!isAttack) {
+                    // Go to the center
+                    transform.position = Vector3.MoveTowards(transform.position, centerPosition, step);
+                    WaitDestroyPC();
+                    ManageScene.sharedInstance.isCounterActive = true;
+               }
+
+
+               // Change the target
+               if(transform.position == currentTarget.transform.position) {
+                    StartCoroutine(WaitDestroyPC());
+                    GetCheckPoint();
+               }
           }
-
-          if(!isAttack) {
-               // Go to the center
-               transform.position = Vector3.MoveTowards(transform.position, centerPosition, step);
-               WaitDestroyPC();
-               ManageScene.sharedInstance.isCounterActive = true;
-          }
-
-
-          // Change the target
-          if(transform.position == currentTarget.transform.position) {
-               StartCoroutine(WaitDestroyPC());
-               GetCheckPoint();
-          } 
      }
 
      void GetCheckPoint() {

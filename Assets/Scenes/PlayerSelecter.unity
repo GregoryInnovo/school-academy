@@ -408,8 +408,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personajes:
-  - {fileID: 7535798648862103358}
   - {fileID: 580021954177099076}
+  - {fileID: 7535798648862103358}
   selectedCharacter: 0
 --- !u!4 &510482035
 Transform:

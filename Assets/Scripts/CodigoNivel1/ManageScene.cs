@@ -8,12 +8,13 @@ public class ManageScene : MonoBehaviour
     [Header("Scene Information")]
     public static ManageScene sharedInstance;
     public bool isCounterActive;
+    public GameObject gameplayUI,gameOverUI, dialogUI;
+    public bool gamePlay;
     public bool gameOver;
+    public bool dialog;
+    public int deadPCs;
+    public int currentRound;
 
-    public Scrollbar Scrollbar1;
-    private float lifeTime;
-    public float speed = 0.08f;
-    public Image healPC1;
     void Awake() {
         // Make sure that only one exits
         if(sharedInstance == null) {    
@@ -23,37 +24,38 @@ public class ManageScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        deadPCs = 0;
+        currentRound = 1;
+        dialog = true;
         gameOver = false;
+        gamePlay = false;
         isCounterActive = false;
+        dialogUI.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     { 
-        
-        float Sb1V = Scrollbar1.value;
-
         if(!gameOver) {
-            // Debug.Log("Gameplay is active");
-            lifeTime += speed;
-            Debug.Log(lifeTime);
+          if(deadPCs == 3) {
+            gameOver = true;
+          }
 
-            if(Sb1V >= 0.8) {
-                healPC1.color = new Color(0, 255, 0);
-            } 
-            if(Sb1V <= 0.7 || Sb1V < 0.5) {
-                healPC1.color = new Color(255, 232, 0);
-            } 
-            if(Sb1V <= 0.4) {
-                healPC1.color = new Color(255, 0, 0);
-            }
-
-            // Activate the counter to fix the Boss
-            if(isCounterActive) {
-                Debug.Log("CounterActive");
-            }
+          if(isCounterActive) {
+              // Debug.Log("CounterActive");
+              Timer.sharedInstance.timerActive = true;
+          }
         } else {
-            Debug.Log("GameOver");
+            // Debug.Log("GameOver");
+            gameplayUI.SetActive(false);
+            gameOverUI.SetActive(true);
         }
     }
+
+    public void StartGame() {
+        gamePlay = true;
+        dialogUI.SetActive(false);
+        gameplayUI.SetActive(true);
+    }
+
 }
