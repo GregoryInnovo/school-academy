@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Video de origen
+
+// https://www.youtube.com/watch?v=3qlRgICRoeA
+
 public class CharacterSelection : MonoBehaviour
 {
 
