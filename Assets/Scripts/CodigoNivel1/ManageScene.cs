@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ManageScene : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class ManageScene : MonoBehaviour
     public bool dialog;
     public int deadPCs;
     public int currentRound;
+    public bool aux;
 
     void Awake() {
         // Make sure that only one exits
@@ -31,6 +33,7 @@ public class ManageScene : MonoBehaviour
         gamePlay = false;
         isCounterActive = false;
         dialogUI.SetActive(true);
+        aux = true;
     }
 
     // Update is called once per frame
@@ -49,6 +52,13 @@ public class ManageScene : MonoBehaviour
             // Debug.Log("GameOver");
             gameplayUI.SetActive(false);
             gameOverUI.SetActive(true);
+            
+            if(aux){
+                 StartCoroutine(FadeSalida());
+                aux=false;
+             } 
+             
+           
         }
     }
 
@@ -56,6 +66,13 @@ public class ManageScene : MonoBehaviour
         gamePlay = true;
         dialogUI.SetActive(false);
         gameplayUI.SetActive(true);
+    }
+
+    IEnumerator FadeSalida()
+    {    
+        yield return new WaitForSeconds(3f);
+        Debug.Log("Cambio escena");
+	    SceneManager.LoadScene("Postpartida");
     }
 
 }

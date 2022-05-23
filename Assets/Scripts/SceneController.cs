@@ -3,8 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class SceneController : MonoBehaviour
 {
+
+public static SceneController sharedInstance;
+
+  void Awake() {
+        // Make sure that only one exits
+        if(sharedInstance == null) {    
+            sharedInstance = this;
+        }
+    }
+
     public void SelectScene(int v) {
       
         switch (v) {
@@ -18,7 +29,7 @@ public class SceneController : MonoBehaviour
                 Debug.Log("Escena Game");
                 break;
             case 2: 
-                StartCoroutine(FadeSalida("Estadisticas"));
+                StartCoroutine(FadeSalida("Postpartida"));
 		Debug.Log("Escena 2");
             break;
             case 3: 

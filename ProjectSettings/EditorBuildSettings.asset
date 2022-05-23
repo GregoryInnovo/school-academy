@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prin.unity
     guid: a4f642c6fb9e8d24aad5d10137f1d709
+  - enabled: 1
+    path: Assets/Scenes/PostPartida.unity
+    guid: fb358be9b21c0c44d961ed49831806af
   m_configObjects: {}
