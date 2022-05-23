@@ -16,7 +16,7 @@ public class DialogSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartDialogue();
     }
 
     // Update is called once per frame
@@ -60,6 +60,7 @@ public class DialogSystem : MonoBehaviour
         } else {
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
+            ManageScene.sharedInstance.StartGame();
         }
     }
 }

@@ -879,25 +879,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3894028312327673912, guid: 3c54515fb96a8dd44a11b90966fb8cd7,
-        type: 3}
-      propertyPath: m_Text
-      value: Texto de ejemplo
-      objectReference: {fileID: 0}
-    - target: {fileID: 3894028312327673919, guid: 3c54515fb96a8dd44a11b90966fb8cd7,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -40
-      objectReference: {fileID: 0}
-    - target: {fileID: 3894028312327673919, guid: 3c54515fb96a8dd44a11b90966fb8cd7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3894028312807137533, guid: 3c54515fb96a8dd44a11b90966fb8cd7,
-        type: 3}
-      propertyPath: m_Text
-      value: Saltar
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c54515fb96a8dd44a11b90966fb8cd7, type: 3}
