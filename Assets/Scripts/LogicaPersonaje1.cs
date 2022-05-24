@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class LogicaPersonaje1 : MonoBehaviour
 {
+    public CharacterController controller;
     public float velocidadMovimiento = 4.0f;
     public float VelocidadRotacion = 250.0f;
     private Animator anim;
     public float x, y;
+
+    public AudioSource pasos;
+    private bool Hactivo;
+    private bool Vactivo;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +31,34 @@ public class LogicaPersonaje1 : MonoBehaviour
         anim.SetFloat("VelX", x);
         anim.SetFloat("VelY", y);
 
+        // Parte del sonido
+        if(Input.GetButtonDown("Horizontal"))
+        {
+            Hactivo = true;
+            pasos.Play();
+        }
+        if(Input.GetButtonDown("Vertical"))
+        {
+            Vactivo = true;
+            pasos.Play();
+        }
+
+        //pause
+        if(Input.GetButtonDown("Horizontal"))
+        {
+            Hactivo = false;
+            if (Vactivo == false)
+            {
+                pasos.Pause();
+            }
+        }
+        if (Input.GetButtonDown("Vertical"))
+        {
+            Vactivo = false;
+            if (Hactivo == false)
+            {
+                pasos.Pause();
+            }
+        }
     }
 }
