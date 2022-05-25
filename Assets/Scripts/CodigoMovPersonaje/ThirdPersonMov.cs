@@ -12,6 +12,7 @@ public class ThirdPersonMov : MonoBehaviour
     float turnSmoothVel;
 
 
+
    void Update()
    {
        float Horizontal = Input.GetAxisRaw("Horizontal");
@@ -27,4 +28,8 @@ public class ThirdPersonMov : MonoBehaviour
            controller.Move(direction * speed * Time.deltaTime);
        }  
    }
+
+
+
+
 }
