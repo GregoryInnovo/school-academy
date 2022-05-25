@@ -1,24 +1,33 @@
-/* using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Nota : MonoBehaviour
 {
-    public int Nota;
+    public float nota;
+    public Text timeText;
+    public Text scoreText;
+    private float timeResult;
     // Start is called before the first frame update
+
     void Start()
     {
-        if(time >= 1:45)
-        Nota = 4.0;      
-    }else if(time > 1:00 && time < 1:45)
-    {
-        Nota = 3.5;
-    }else (time < 1:00)
-    {
-        Nota = 2.0;
+        timeText.text = PlayerPrefs.GetFloat("tiempo").ToString();
+        timeResult = int.Parse(PlayerPrefs.GetFloat("tiempo").ToString());
+        if(timeResult >= 70)
+        {
+            nota = 5.0f;
+            
+        }else {
+            nota = 3.0f;
+        }
+        scoreText.text = PlayerPrefs.GetFloat("tiempo").ToString();
+        
     }
+  
+   
 
 
 
 }
- */
