@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 162122964}
   - component: {fileID: 162122963}
   m_Layer: 5
-  m_Name: subtitulo
+  m_Name: subtituloTiempo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 699365177}
   - component: {fileID: 699365176}
   m_Layer: 5
-  m_Name: Subtitulo
+  m_Name: SubtituloNota
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
