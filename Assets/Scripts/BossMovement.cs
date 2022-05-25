@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossMovement : MonoBehaviour
 {
@@ -11,11 +12,14 @@ public class BossMovement : MonoBehaviour
     public int currentRound;
     public Vector3 centerPosition;
     public bool isAttack;
+    public bool canRepair;
+    public BoxCollider bossCollider;
     
     [Header("Boss Targets")]
     public List<GameObject> checkPoints = new List<GameObject>();
     public int randomIdx;
     public List<GameObject> currentCheckPoints = new List<GameObject>();
+    public int amountCheckPointsLeft;
 
     [Header("Current Target")]
     public GameObject currentTarget;
@@ -49,9 +53,7 @@ public class BossMovement : MonoBehaviour
 
                if(!isAttack) {
                     // Go to the center
-                    transform.position = Vector3.MoveTowards(transform.position, centerPosition, step);
-                    WaitDestroyPC();
-                    ManageScene.sharedInstance.isCounterActive = true;
+                    WaitInTheCenter();
                }
 
 
@@ -66,11 +68,12 @@ public class BossMovement : MonoBehaviour
      void GetCheckPoint() {
           if(isAttack) {
                // Init with a random position
-               if(checkPoints.Count >= 1) {
+               if(checkPoints.Count > amountCheckPointsLeft) {
                     randomIdx = Random.Range(0, checkPoints.Count);
                     currentTarget = checkPoints[randomIdx];
                     currentCheckPoints.Add(currentTarget);
                     checkPoints.Remove(currentTarget);
+
                } else {
                     Debug.Log("El Boss termino de ir al punto");
                     isAttack = false;
@@ -90,5 +93,27 @@ public class BossMovement : MonoBehaviour
         //After we have waited 5 seconds print the time again.
         //Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         canMove = true;
+    }
+
+    void WaitInTheCenter() {
+         transform.position = Vector3.MoveTowards(transform.position, centerPosition, step);
+         ManageScene.sharedInstance.isCounterActive = true;
+         canMove = false;
+         canRepair = true;
+    }
+
+    void OnTriggerStay(Collider bossCollider) {
+         if(Input.GetKeyDown(KeyCode.E) && canRepair) {
+            if(bossCollider.gameObject.tag == "Player") {
+               canMove = true;
+               isAttack = true;
+               canRepair = false;
+               amountCheckPointsLeft = amountCheckPointsLeft - 7;
+               ManageScene.sharedInstance.isCounterActive = false;
+            }
+            if(Input.GetKeyDown(KeyCode.E) && amountCheckPointsLeft <= 0) {
+                 SceneManager.LoadScene("Postpartida");
+            }
+         }
     }
 }
