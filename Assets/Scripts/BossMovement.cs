@@ -13,7 +13,7 @@ public class BossMovement : MonoBehaviour
     public Vector3 centerPosition;
     public bool isAttack;
     public bool canRepair;
-    public BoxCollider bossCollider;
+    public SphereCollider bossCollider;
     
     [Header("Boss Targets")]
     public List<GameObject> checkPoints = new List<GameObject>();
@@ -32,6 +32,7 @@ public class BossMovement : MonoBehaviour
     void Start()
     {
          GetCheckPoint();
+         PlayerPrefs.SetFloat("tiempo", Timer.sharedInstance.CurrentTime);
          canMove = true;
          currentRound = 1;
          isAttack = true;
@@ -111,9 +112,13 @@ public class BossMovement : MonoBehaviour
                amountCheckPointsLeft = amountCheckPointsLeft - 7;
                ManageScene.sharedInstance.isCounterActive = false;
             }
-            if(Input.GetKeyDown(KeyCode.E) && amountCheckPointsLeft <= 0) {
-                 SceneManager.LoadScene("Postpartida");
-            }
+            
          }
+
+         if(Input.GetKeyDown(KeyCode.E) && !canRepair && amountCheckPointsLeft < 0) {
+              PlayerPrefs.SetFloat("tiempo", Timer.sharedInstance.CurrentTime);
+              SceneManager.LoadScene("Postpartida");
+          }
+         
     }
 }

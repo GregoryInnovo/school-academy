@@ -6363,7 +6363,7 @@ MonoBehaviour:
   Particles: {fileID: 700992255}
   healPC: {fileID: 1436525464}
   Scrollbar: {fileID: 1436525463}
-  speed: 0.05
+  speed: 0.005
   reduceLife: 0
 --- !u!1 &126137137
 GameObject:
@@ -23656,7 +23656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerActive: 0
-  StarMinutes: 1
+  StarMinutes: 100
   CurrentTimeText: {fileID: 1392626325}
 --- !u!1 &978076039
 GameObject:
@@ -24797,7 +24797,7 @@ MonoBehaviour:
   Particles: {fileID: 1219692686}
   healPC: {fileID: 1169322487}
   Scrollbar: {fileID: 1169322486}
-  speed: 0.05
+  speed: 0.005
   reduceLife: 0
 --- !u!65 &1069301097
 BoxCollider:
@@ -26923,7 +26923,7 @@ MonoBehaviour:
   Particles: {fileID: 41173896}
   healPC: {fileID: 889065991}
   Scrollbar: {fileID: 889065990}
-  speed: 0.05
+  speed: 0.005
   reduceLife: 0
 --- !u!65 &1189825181
 BoxCollider:
@@ -50215,7 +50215,7 @@ MonoBehaviour:
   Particles: {fileID: 1991756980}
   healPC: {fileID: 2084189041}
   Scrollbar: {fileID: 2084189040}
-  speed: 0.05
+  speed: 0.005
   reduceLife: 0
 --- !u!65 &2119881819
 BoxCollider:
@@ -62012,15 +62012,30 @@ MonoBehaviour:
   centerPosition: {x: 0, y: 0, z: 0}
   isAttack: 0
   canRepair: 0
-  bossCollider: {fileID: 0}
+  bossCollider: {fileID: 7939435280676067059}
   checkPoints:
   - {fileID: 118044528}
   - {fileID: 1189825179}
   - {fileID: 1069301095}
   - {fileID: 2119881817}
+  - {fileID: 118044528}
+  - {fileID: 1189825179}
+  - {fileID: 1069301095}
+  - {fileID: 2119881817}
+  - {fileID: 118044528}
+  - {fileID: 1189825179}
+  - {fileID: 1069301095}
+  - {fileID: 2119881817}
+  - {fileID: 118044528}
+  - {fileID: 1189825179}
+  - {fileID: 1069301095}
+  - {fileID: 2119881817}
+  - {fileID: 118044528}
+  - {fileID: 1189825179}
+  - {fileID: 1069301095}
   randomIdx: 0
   currentCheckPoints: []
-  amountCheckPointsLeft: 0
+  amountCheckPointsLeft: 14
   currentTarget: {fileID: 3001446852576614062}
   waitTime: 1
 --- !u!4 &3010207748473045503
@@ -81523,6 +81538,7 @@ GameObject:
   - component: {fileID: 5001121395770628657}
   - component: {fileID: 3773805163743505632}
   - component: {fileID: 2976482819024409540}
+  - component: {fileID: 7939435280676067059}
   m_Layer: 0
   m_Name: Body
   m_TagString: Boss
@@ -81530,6 +81546,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!135 &7939435280676067059
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7939435280676067058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.008
+  m_Center: {x: 0.0000073605343, y: -0.0003, z: -0.003}
 --- !u!1 &7951392981301707714
 GameObject:
   m_ObjectHideFlags: 0

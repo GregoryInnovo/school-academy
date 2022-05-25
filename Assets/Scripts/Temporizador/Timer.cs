@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
 {
    public static Timer sharedInstance;
    public bool timerActive = false;
-   float CurrentTime;
+   public float CurrentTime;
    public int StarMinutes;
    public Text CurrentTimeText;
 
