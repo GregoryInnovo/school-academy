@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-       CurrentTime = StarMinutes * 30;
+       CurrentTime = StarMinutes;
     }
     void Update()
     {

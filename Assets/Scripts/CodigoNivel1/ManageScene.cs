@@ -45,8 +45,9 @@ public class ManageScene : MonoBehaviour
           }
 
           if(isCounterActive) {
-              // Debug.Log("CounterActive");
               Timer.sharedInstance.timerActive = true;
+          } else {
+              Timer.sharedInstance.timerActive = false;
           }
         } else {
             // Debug.Log("GameOver");
