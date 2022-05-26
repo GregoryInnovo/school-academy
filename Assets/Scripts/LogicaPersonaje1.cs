@@ -31,6 +31,7 @@ public class LogicaPersonaje1 : MonoBehaviour
         anim.SetFloat("VelX", x);
         anim.SetFloat("VelY", y);
 
+
         // Parte del sonido
         if(Input.GetButtonDown("Horizontal"))
         {
