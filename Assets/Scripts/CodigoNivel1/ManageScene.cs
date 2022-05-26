@@ -16,6 +16,8 @@ public class ManageScene : MonoBehaviour
     public int deadPCs;
     public int currentRound;
     public bool aux;
+    public Text highScoreText;
+    public int highScore;
 
     void Awake() {
         // Make sure that only one exits
@@ -26,6 +28,7 @@ public class ManageScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        highScore = 0;
         deadPCs = 0;
         currentRound = 1;
         dialog = true;
@@ -34,6 +37,7 @@ public class ManageScene : MonoBehaviour
         isCounterActive = false;
         dialogUI.SetActive(true);
         aux = true;
+        highScoreText.text = "Puntaje: " + highScore;
     }
 
     // Update is called once per frame
@@ -55,8 +59,8 @@ public class ManageScene : MonoBehaviour
             gameOverUI.SetActive(true);
             
             if(aux){
-                 StartCoroutine(FadeSalida());
-                aux=false;
+                StartCoroutine(FadeSalida());
+                aux = false;
              } 
              
            
@@ -74,6 +78,18 @@ public class ManageScene : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Debug.Log("Cambio escena");
 	    SceneManager.LoadScene("Postpartida");
+    }
+
+    public void incrementHighScore() {
+        highScore = highScore + 100;
+        highScoreText.text = "Puntaje: " + highScore;
+        PlayerPrefs.SetInt("puntaje", highScore);
+    }
+
+    public void reduceHighScore() {
+        highScore = highScore - 150;
+        highScoreText.text = "Puntaje: " + highScore;
+        PlayerPrefs.SetInt("puntaje", highScore);
     }
 
 }

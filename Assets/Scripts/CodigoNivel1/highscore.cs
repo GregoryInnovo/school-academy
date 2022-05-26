@@ -9,6 +9,7 @@ public class highscore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        highscoreText.text = PlayerPrefs.GetFloat("tiempo").ToString();
+        // highscoreText.text = PlayerPrefs.GetFloat("tiempo").ToString();
+        highscoreText.text = PlayerPrefs.GetInt("puntaje").ToString();
     }
 }
