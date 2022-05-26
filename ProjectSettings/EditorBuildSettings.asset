@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/NivelesSelecter.unity
     guid: c3a194f46e57c144eacfcef1a8492ef9
   - enabled: 1
+    path: Assets/Scenes/RobotTeser.unity
+    guid: de16dffa84bef324380fba00129b1810
+  - enabled: 1
     path: Assets/Scenes/Excena4.unity
     guid: 158030c38523f0449b3cb0fe90420bac
   - enabled: 1
