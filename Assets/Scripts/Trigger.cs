@@ -14,6 +14,16 @@ public class Trigger : MonoBehaviour
     public bool reduceLife;
     private bool aux = true;
 
+    public static Trigger sharedInstance;
+
+        
+    void Awake() {
+        // Make sure that only one exits
+        if(sharedInstance == null) {    
+            sharedInstance = this;
+        }
+    }
+
     void Update() {
         if(reduceLife) {
         lifeTime = speed * Time.deltaTime;
@@ -42,31 +52,20 @@ public class Trigger : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider col)
-    {
-	Debug.Log("Hubo Colisión 1");
-	if(col.gameObject.tag == "Boss"){
-	   Debug.Log("Generar Particulas");
-           Particles.SetActive(true);
-           reduceLife = true;
-	} else if (col.gameObject.tag == "Player"){
-	   Debug.Log("Detener Particulas");
-           Particles.SetActive(false);
-	}
-        
-    }
-
     void OnTriggerStay(Collider col)
     {
-	//Debug.Log("Hubo Colisión 2");
-        
-    }
-
-    void OnTriggerExit(Collider col)
-    {
-        Debug.Log("Hubo Colisión 3");
-        // reduceLife = false;
-    
-        
+        //    Debug.Log("Hubo Colisión 1");
+        if(col.gameObject.tag == "Boss"){
+            Debug.Log("Generar Particulas");
+            Particles.SetActive(true);
+            reduceLife = true;
+        } else if (col.gameObject.tag == "Player"){
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("Detener Particulas");
+                Particles.SetActive(false);
+                reduceLife = false;
+            }
+        }          
     }
 }

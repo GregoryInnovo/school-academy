@@ -23,7 +23,7 @@ public class ColliderDetection : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         Debug.Log("I'm the trigger, someone has enter");
 
