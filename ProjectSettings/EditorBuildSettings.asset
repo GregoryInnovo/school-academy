@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Principal.unity
     guid: 93200c1f49f38644797789d7085ddecb
@@ -20,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Excena2.unity
     guid: 44ffc972ed032b64bba02878dba32ce0
-  - enabled: 1
-    path: Assets/Scenes/Excena3.unity
-    guid: 624d36bb993bd16498582345572d233c
   - enabled: 1
     path: Assets/Scenes/NivelesSelecter.unity
     guid: c3a194f46e57c144eacfcef1a8492ef9

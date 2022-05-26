@@ -33,8 +33,7 @@ public static SceneController sharedInstance;
 		Debug.Log("Escena 2");
             break;
             case 3: 
-                Debug.Log("Escena game");
-
+                StartCoroutine(FadeSalida("NivelesSelecter"));
             break;
             default: 
                 Debug.Log("Escena Default");

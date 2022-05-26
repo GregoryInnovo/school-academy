@@ -32,7 +32,7 @@ public class BossMovement : MonoBehaviour
     void Start()
     {
          GetCheckPoint();
-         PlayerPrefs.SetFloat("tiempo", Timer.sharedInstance.CurrentTime);
+         PlayerPrefs.SetFloat("tiempo", 0f);
          canMove = true;
          currentRound = 1;
          isAttack = true;
