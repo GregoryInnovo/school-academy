@@ -44,6 +44,7 @@ public class Trigger : MonoBehaviour
                 healPC.color = new Color(0, 0, 0);
                 if(aux) {
                     ManageScene.sharedInstance.deadPCs = ManageScene.sharedInstance.deadPCs + 1;
+                    ManageScene.sharedInstance.reduceHighScore();
                     aux = false;
                 }
             }
@@ -54,7 +55,7 @@ public class Trigger : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        //    Debug.Log("Hubo Colisión 1");
+        //Debug.Log("Hubo Colisión 1");
         if(col.gameObject.tag == "Boss"){
             Debug.Log("Generar Particulas");
             Particles.SetActive(true);
@@ -65,6 +66,7 @@ public class Trigger : MonoBehaviour
                 Debug.Log("Detener Particulas");
                 Particles.SetActive(false);
                 reduceLife = false;
+                ManageScene.sharedInstance.incrementHighScore();
             }
         }          
     }
