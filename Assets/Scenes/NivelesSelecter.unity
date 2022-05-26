@@ -293,7 +293,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1127752987, guid: 3c54515fb96a8dd44a11b90966fb8cd7, type: 3}
       propertyPath: dialogueLines.Array.data[2]
-      value: "Gallego: y as\xED, convertirte en un Ingenier@ Multimedia"
+      value: 'Gallego: los cursos se desboquean cada vez que superas el anterior,
+        vamos al curso de programacion'
       objectReference: {fileID: 0}
     - target: {fileID: 3894028310835272853, guid: 3c54515fb96a8dd44a11b90966fb8cd7,
         type: 3}
