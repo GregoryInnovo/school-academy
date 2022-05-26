@@ -12,6 +12,7 @@ public class DialogSystem : MonoBehaviour
     private bool didDialogueStart;
     private int lineIndex;
     private float typingTime = 0.05f;
+    public GameObject Panel;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +61,7 @@ public class DialogSystem : MonoBehaviour
         } else {
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
+            Panel.SetActive(false);
             ManageScene.sharedInstance.StartGame();
         }
     }

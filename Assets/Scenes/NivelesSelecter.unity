@@ -278,6 +278,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 465744469}
     m_Modifications:
     - target: {fileID: 1127752987, guid: 3c54515fb96a8dd44a11b90966fb8cd7, type: 3}
+      propertyPath: Panel
+      value: 
+      objectReference: {fileID: 1863521959}
+    - target: {fileID: 1127752987, guid: 3c54515fb96a8dd44a11b90966fb8cd7, type: 3}
       propertyPath: dialogueLines.Array.data[0]
       value: "Gallego: Hola soy Andres Gallego, director del programa Ingenier\xEDa
         Multimedia"
@@ -472,6 +476,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3894028311601533072, guid: 3c54515fb96a8dd44a11b90966fb8cd7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894028311734581844, guid: 3c54515fb96a8dd44a11b90966fb8cd7,
         type: 3}
       propertyPath: m_IsActive
       value: 0
