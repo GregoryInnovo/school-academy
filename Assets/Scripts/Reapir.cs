@@ -14,16 +14,16 @@ public class Reapir : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.P))
+        if (Input.GetKey(KeyCode.E))
         {
             Anim.SetBool("Rep", true);
-            GameObject.Find("Personaje1").GetComponent<LogicaPersonaje1>().enabled = false;
+            GameObject.Find("Personaje1").GetComponent<ThirdPersonMov>().enabled = false;
             transform.Translate(Vector3.forward * repairSpeed * Time.deltaTime);
         }   
         else
         {
             Anim.SetBool("Rep", false);
-            GameObject.Find("Personaje1").GetComponent<LogicaPersonaje1>().enabled = true;
+            GameObject.Find("Personaje1").GetComponent<ThirdPersonMov>().enabled = true;
         }
     }
 }
