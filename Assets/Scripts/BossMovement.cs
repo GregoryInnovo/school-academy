@@ -9,6 +9,7 @@ public class BossMovement : MonoBehaviour
     [Header("Boss Info")]
     public float speed = 0.5f;
     public bool canMove;
+    public GameObject particlesBoss;
     public int currentRound;
     public Vector3 centerPosition;
     public bool isAttack;
@@ -74,6 +75,7 @@ public class BossMovement : MonoBehaviour
                     currentTarget = checkPoints[randomIdx];
                     currentCheckPoints.Add(currentTarget);
                     checkPoints.Remove(currentTarget);
+                    particlesBoss.gameObject.SetActive(false);
 
                } else {
                     Debug.Log("El Boss termino de ir al punto");
@@ -101,6 +103,7 @@ public class BossMovement : MonoBehaviour
          ManageScene.sharedInstance.isCounterActive = true;
          canMove = false;
          canRepair = true;
+         particlesBoss.gameObject.SetActive(true);
     }
 
     void OnTriggerStay(Collider bossCollider) {
