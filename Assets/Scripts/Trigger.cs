@@ -64,10 +64,20 @@ public class Trigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Detener Particulas");
-                Particles.SetActive(false);
+                StartCoroutine(stopParticlesSystem());
+                
                 reduceLife = false;
                 ManageScene.sharedInstance.incrementHighScore();
             }
         }          
+    }
+
+       
+    
+
+    IEnumerator stopParticlesSystem()
+    {    
+        yield return new WaitForSeconds(4f);
+        Particles.SetActive(false);
     }
 }
