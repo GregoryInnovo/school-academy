@@ -13564,6 +13564,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7685121383230057932, guid: fedb13e75532b46489801831876731fa,
         type: 3}
+      propertyPath: Anim
+      value: 
+      objectReference: {fileID: 1260273560}
+    - target: {fileID: 7685121383230057932, guid: fedb13e75532b46489801831876731fa,
+        type: 3}
       propertyPath: MensajeFlotante
       value: 
       objectReference: {fileID: 0}
@@ -33490,6 +33495,12 @@ MeshFilter:
 --- !u!1 &1260273556 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7685121383230057934, guid: fedb13e75532b46489801831876731fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 580612018}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1260273560 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7685121383230057969, guid: fedb13e75532b46489801831876731fa,
     type: 3}
   m_PrefabInstance: {fileID: 580612018}
   m_PrefabAsset: {fileID: 0}
