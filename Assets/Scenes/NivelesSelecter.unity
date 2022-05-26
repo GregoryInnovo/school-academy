@@ -805,7 +805,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Programaci\xF3n Orientada a Objetos"
+  m_Text: Taller de imagen y modelado
 --- !u!222 &818167323
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -900,7 +900,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Cr\xE9ditos: 3"
+  m_Text: "Cr\xE9ditos: 4"
 --- !u!222 &842793910
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -995,7 +995,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Programaci\xF3n Orientada a Objetos"
+  m_Text: Procesamiento de Audo
 --- !u!222 &884593599
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1090,7 +1090,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Cr\xE9ditos: 3"
+  m_Text: "Cr\xE9ditos: 4"
 --- !u!222 &938394302
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2272,10 +2272,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: f60bdc3f3355c51499703c7377326f45, type: 3}
-    m_FontSize: 236
+    m_FontSize: 205
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 236
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -2283,7 +2283,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Programaci\xF3n Orientada a Objetos"
+  m_Text: "F\xEDsica"
 --- !u!222 &1960980587
 CanvasRenderer:
   m_ObjectHideFlags: 0
