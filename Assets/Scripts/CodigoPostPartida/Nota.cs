@@ -10,6 +10,7 @@ public class Nota : MonoBehaviour
     public Text puntajeText;
     public Text scoreText;
     private float timeResult;
+    private int scoreResult;
     // Start is called before the first frame update
 
     void Start()
@@ -17,20 +18,23 @@ public class Nota : MonoBehaviour
         
         puntajeText.text = PlayerPrefs.GetInt("puntaje").ToString();
         timeText.text = PlayerPrefs.GetFloat("tiempo").ToString();
-        timeResult = int.Parse(PlayerPrefs.GetFloat("tiempo").ToString());
-        if(timeResult >= 70)
+        scoreResult = int.Parse(PlayerPrefs.GetInt("puntaje").ToString());
+        Debug.Log("puntaje es: " + scoreResult);
+        timeResult = float.Parse(PlayerPrefs.GetFloat("tiempo").ToString());
+        Debug.Log("tiempo es: " + timeResult);
+        if(scoreResult >= 1400)
         {
-            nota = 5.0f;
-            
-        }else {
+            nota = 5.0f;      
+        } else if(scoreResult <= 1399 && scoreResult >= 1000) {
+            nota = 4.0f;
+        } else if(scoreResult <= 999 && scoreResult >= 800) {
             nota = 3.0f;
+        } else if(scoreResult <= 799 && scoreResult >= 300) {
+            nota = 2.0f;
+        } else {
+            nota = 1.0f;
         }
-        scoreText.text = PlayerPrefs.GetFloat("tiempo").ToString();
-        
+
+        scoreText.text = nota.ToString();   
     }
-  
-   
-
-
-
 }
