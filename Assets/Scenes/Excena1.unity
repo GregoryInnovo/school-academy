@@ -34182,7 +34182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1274396046
 Transform:
   m_ObjectHideFlags: 0
@@ -34273,7 +34273,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1274396045}
   serializedVersion: 8
   lengthInSec: 5
-  simulationSpeed: 4.12
+  simulationSpeed: 3.76
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -34347,7 +34347,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.07
+      scalar: 1.77
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -34400,7 +34400,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -0.06
+      scalar: -0.03
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -34454,7 +34454,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
+      maxColor: {r: 0.5963592, g: 0.735849, b: 0.5935386, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -34516,7 +34516,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.25
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -35713,21 +35713,13 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: -4843084866794946696, guid: 342e62c9e8917fd4b8a0efbc4769612e,
+    - sprite: {fileID: 1207683243949369146, guid: efed64b68fa5f7b4eac81ac3fe27e54b,
         type: 3}
-    - sprite: {fileID: 283659769160288367, guid: 342e62c9e8917fd4b8a0efbc4769612e,
+    - sprite: {fileID: -154665775858766827, guid: efed64b68fa5f7b4eac81ac3fe27e54b,
         type: 3}
-    - sprite: {fileID: -6074481569577635524, guid: 342e62c9e8917fd4b8a0efbc4769612e,
+    - sprite: {fileID: 5894368019760177030, guid: efed64b68fa5f7b4eac81ac3fe27e54b,
         type: 3}
-    - sprite: {fileID: 6867326101881782318, guid: 342e62c9e8917fd4b8a0efbc4769612e,
-        type: 3}
-    - sprite: {fileID: -8181899741293955455, guid: 342e62c9e8917fd4b8a0efbc4769612e,
-        type: 3}
-    - sprite: {fileID: 3911131704565170735, guid: 342e62c9e8917fd4b8a0efbc4769612e,
-        type: 3}
-    - sprite: {fileID: 8921762128809831596, guid: 342e62c9e8917fd4b8a0efbc4769612e,
-        type: 3}
-    - sprite: {fileID: 7864917065568854241, guid: 342e62c9e8917fd4b8a0efbc4769612e,
+    - sprite: {fileID: 2585047030106337506, guid: efed64b68fa5f7b4eac81ac3fe27e54b,
         type: 3}
     flipU: 0
     flipV: 0
