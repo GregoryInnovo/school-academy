@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 31108640}
   - component: {fileID: 31108639}
   m_Layer: 5
-  m_Name: NivelProgramacion (2)
+  m_Name: NivelFisica (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1375,7 +1375,7 @@ GameObject:
   - component: {fileID: 2093047676}
   - component: {fileID: 2093047678}
   m_Layer: 5
-  m_Name: NivelFisica (1)
+  m_Name: NivelProga (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1420,7 +1420,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d0961b4fb55c4a44ca391b0fc1c4a0df, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 713911d3d76df614eb29a85aef6014ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1615,8 +1615,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _img: {fileID: 2093047674}
-  _default: {fileID: 21300000, guid: d0961b4fb55c4a44ca391b0fc1c4a0df, type: 3}
-  _pressed: {fileID: 21300000, guid: d0961b4fb55c4a44ca391b0fc1c4a0df, type: 3}
+  _default: {fileID: 21300000, guid: 713911d3d76df614eb29a85aef6014ef, type: 3}
+  _pressed: {fileID: 21300000, guid: 391355acef4e3684fa67a7e09edebffe, type: 3}
   _compressClip: {fileID: 8300000, guid: ee5d29f836879404b9ce4b4137226aad, type: 3}
   _uncompressClip: {fileID: 8300000, guid: 46bdfd82e5bc5d1469ca76bb1c7c826f, type: 3}
   _source: {fileID: 2093047678}
